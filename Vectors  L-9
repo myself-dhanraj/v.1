@@ -1,0 +1,74 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+
+int main() {
+    
+    vector<int>vec ={1,2,3,4,5};
+    
+    cout<<vec[2]<<endl;
+}
+
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+
+int main() {
+    
+    vector<int>vec(5,3);
+    
+    cout<<vec[2]<<endl;
+}
+
+FOR EACH LOOP
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+
+int main() {
+    
+    vector<char>vec= {'a','b','c','d','e'};
+    
+    for (char val : vec){
+        
+        cout<<val<<endl;
+        
+    }
+    return 0;
+}
+
+FUNCTIONS OF VECTOR
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+
+int main() {
+    
+    vector<int>vec;
+    
+    cout<< "the size of vec= "<<vec.size()<<endl; //vector size
+    
+    vec.push_back(14); //push_back function add element at last
+    vec.push_back(16);
+    vec.push_back(18);
+    
+    vec.pop_back(); //pop_back function deletes the last element
+    
+    
+    cout<< "the size after push back is = " <<vec.size()<<endl;
+    
+    cout<<"the front gives the first value = "<<vec.front()<<endl;
+    
+    cout<<"the back gives the last value = "<<vec.back() <<endl;
+    
+    cout<<"the .at gives the index at that VAL= "<<vec.at(1)<<endl;
+    
+    }
+    
