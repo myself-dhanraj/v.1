@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a = 10;
+    int* ptr = &a;
+
+    int* ptr = NULL // null pointer
+    
+    int ** ptr2 = &ptr;
+    
+    cout<< **(ptr2) <<endl;
+    cout<< ptr <<endl;
+    
+    cout<< *(&a)<<endl;
+}
+
+Question guess it :
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a = 5;
+    int* p = &a;
+    int** q = &p;
+    
+    cout<< *p <<endl;
+    cout<< **q <<endl;
+    cout<< p <<endl;
+    cout<< *q <<endl;
+    
+    
+}
