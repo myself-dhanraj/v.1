@@ -101,7 +101,7 @@ public:
     }
 };
 
-LEET CODE SINGLE ELEMENT IN A SORTED ARRAY
+LEET CODE SINGLE ELEMENT IN A SORTED ARRAY.
 class Solution {
 public:
     int singleNonDuplicate(vector<int>& A) {
