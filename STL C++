@@ -317,4 +317,135 @@ int main(){
         q.pop();
     }
     
+}\
+
+MAP:
+#include <iostream>
+#include<vector>
+#include<map>
+using namespace std;
+
+int main()
+{
+   map<string,int> mp;
+   mp["tv"] = 50;
+   mp["earphones"] = 150;
+   mp["bats"] = 55;
+   mp["tv"] = 1000;
+   
+   mp.erase("bats");
+   
+   mp.insert({"camera",26});
+   
+   for(auto pr : mp){
+       cout << pr.first<<" "<<pr.second <<endl;
+   }
+   
+   if(mp.find("tv")!=mp.end()){
+       cout<<"found"<<endl;
+   }
+   else{
+       cout<<"not found"<<endl;
+   }
+   cout<< mp.count("tv")<<endl; // gives the count of tv variable 1 even if repeated
+   cout<< mp["tv"]<<endl; // gives the value i.e 1000
+   
+}
+
+SETS:
+#include <iostream>
+#include<vector>
+#include<map>
+#include<unordered_map>
+#include<set>
+#include<algorithm>
+using namespace std;
+
+int main()
+{
+   set<int> st;
+   
+   st.insert(1);
+   st.insert(2);
+   st.insert(3);
+  // st.insert(4);
+   st.insert(5);
+  
+   cout<< "the lower bound = "<< *(st.lower_bound(3))<<endl;
+   cout<< "the upper bound = "<< *(st.upper_bound(4))<<endl;
+   for(auto val : st){
+       cout<< val <<endl;
+   }
+}
+
+SORTING:
+#include <iostream>
+#include<vector>
+#include<map>
+#include<unordered_map>
+#include<set>
+#include<algorithm>
+using namespace std;
+
+int main()
+{
+   int arr[5]={1,5,7,6,9};
+   sort(arr,arr+5,greater<int>());
+   
+   for(int val : arr){
+       cout<<val<<endl;
+   }
+}
+
+Sorting based on second number in the pair:
+#include <iostream>
+#include<vector>
+#include<map>
+#include<unordered_map>
+#include<set>
+#include<algorithm>
+using namespace std;
+
+bool comparator(pair<int,int>p1 , pair<int,int>p2){
+    if(p1.second < p2.second) return true;
+    else return false;
+}
+
+int main()
+{
+   vector<pair<int,int>> vec = {{2,1},{3,1},{5,2},{1,5}};
+   
+   sort(vec.begin(),vec.end(),comparator);
+   
+   for(auto pr : vec){
+       cout<<pr.first<<" "<<pr.second<<endl;
+   }
+}
+
+When equal case :
+#include<vector>
+#include<map>
+#include<unordered_map>
+#include<set>
+#include<algorithm>
+using namespace std;
+
+bool comparator(pair<int,int>p1 , pair<int,int>p2){
+    if(p1.second > p2.second) return true;
+    if(p1.second < p2.second) return false;
+    
+    if(p1.first > p2.first) return true;
+    else return false;
+    
+}
+
+int main()
+{
+   vector<int> vec = {5,8,2,9,6};
+   
+   reverse(vec.begin(),vec.end());
+   
+   for(auto pr : vec){
+       cout<< pr <<endl;
+   }
 }
